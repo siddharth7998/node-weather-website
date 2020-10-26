@@ -12,7 +12,8 @@ const forecast= (latitude,longitude,callback)=>{
             console.log(response.body)
         }
         else{
-            callback(undefined,response.body.current.temperature)
+            
+            callback(undefined,response.body.current.temperature + ' and the humidity is: '+ response.body.current.humidity)
         }
         
     })
